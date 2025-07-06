@@ -1,8 +1,8 @@
 package javaEx;
 
-import java.util.Random;
+import java.util.Arrays;
 
-public class Ex01 {
+public class Ex01_01 {
 
 	public static void main(String[] args) {
 		int[] lotto = new int[6];
@@ -14,6 +14,8 @@ public class Ex01 {
 				}
 			}
 		}
+		
+		Arrays.sort(lotto);
 
 		for (int i = 0; i < lotto.length; i++) {
 			System.out.print(lotto[i] + " ");

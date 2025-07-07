@@ -1,0 +1,25 @@
+'''
+Created on 2025. 6. 23.
+
+@author: user
+'''
+
+def para_func(n1, n2, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0):
+    res = 0
+    res = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + n10
+    return res
+
+def para_func1(*para):
+    res = 0
+    for n in para:
+        res += n
+    print(para)
+    return res
+
+if __name__ == '__main__':
+    print(para_func(10, 20))
+    print(para_func(10, 20, 30, 40, 50, 60, 70, 80, 90, 100))
+    print(para_func1(10, 20))
+    print(para_func1(10, 20, 30, 40, 50, 60, 70, 80, 90, 100))
+
+    

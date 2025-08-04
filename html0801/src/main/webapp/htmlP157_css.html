@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 157 Example</title>
+	<style>
+		#container{
+			width: 600px;
+			margin: 10px auto;
+		}
+		
+		fieldset {
+			margin-bottom: 20px;
+		}
+		
+		ul {
+			list-style: none;
+			padding-left: 0px;
+		}
+		
+		li {
+			margin: 10px;
+		}
+		
+		li label {
+			width: 120px;
+			line-height: 36px;
+			float: left;
+			font-weight: bold;
+		}
+		
+		input[type="text"], input[type="password"], input[type="email"] {
+			width: 300px;
+			height: 30px;
+		}
+		
+		select {
+			width: 100px;
+			height: 30px;
+		}
+		
+		#buttons {
+			width: 400px;
+			margin: 20px auto;
+			text-align: center;
+		}
+		
+		#buttons input {
+			width: 150px;
+			height: 35px;
+			font-size: 15px;
+		}
+		
+		#buttons input:hover {
+			background-color: dodgerblue;
+			border-color:navy;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h2>회원 가입을 환영합니다.</h2>
+		<form>
+			<fieldset>
+				<legend>사용자 정보</legend>
+				<ul>
+					<li>
+						<label for="id">아이디</label>
+						<input type="text" name="id" autofocus required placeholder="4자 ~ 10자 사이, 공백 없이">
+					</li>
+					<li>
+						<label for="email">이메일</label>
+						<input type="email" name="eamil" required>
+					</li>
+					<li>
+						<label for="pwd1">비밀번호</label>
+						<input type="password" name="pwd1" required placeholder="문자와 숫자, 특수기호 포함">
+					</li>
+					<li>
+						<label for="pwd2">비밀번호 확인</label>
+						<input type="password" name="pwd2" required >
+					</li>
+					<li>
+						<label for="path">가입 경로</label>
+						<select id="path">
+							<option value="blog">블로그</option>
+							<option value="search">검색</option>
+							<option value="sns">SNS</option>
+							<option value="etc">기타</option>
+						</select>
+					</li>
+					<li>
+						<label for="memo">메모</label>
+						<textarea rows="4" cols="40" placeholder="남기실 말씀이 있다면 여기에"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>이벤트와 새로운 소식</legend>
+					<input type="radio" name="mail" value="Yes">
+					<label for="mail_Yes">메일 수신</label>
+					<input type="radio" name="mail" value="No">
+					<label for="mail_No">메일 수신 안함</label>
+			</fieldset>
+			<div id="buttons">	
+				<input type="submit" value="가입하기">
+				<input type="reset" value="취소">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

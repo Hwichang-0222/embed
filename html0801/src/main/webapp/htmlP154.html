@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 154 Example</title>
+	<style>
+		label {
+			width: 120px;
+			text-align: left;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>배송 정보 입력 양식</h2>
+	<form>
+		<fieldset>
+			<legend> 배송 정보 </legend>
+			<ul id="shipping" style="list-style-type: none;">
+				<li>
+					<label for="prod" id="prod">주문 상품 
+					<input type="text" name="prod" value="상품용 3kg" readonly></label>
+				</li>
+				<li>
+					<label for="name" id="name">이름 
+					<input type="text" name="name" autofocus required></label>
+				</li>
+				<li>
+					<label for="addr" id="addr">배송 주소 
+					<input type="text" name="addr" required></label>
+				</li>
+				<li>
+					<label for="email" id="email">이메일 
+					<input type="email" name="eamil"></label>
+				</li>
+				<li>
+					<label for="phone" id="phone">연락처 
+					<input type="tel" name="phone" placeholder="하이픈을 제외하고 입력해 주세요(ex.01012345678)" required></label>
+				</li>
+				<li>
+					<label for="delivery_Date" id="delivery_Date">배송 지정 
+					<input type="date" name="delivery_Date"><sub><br>(주문일로부터 3일 이후 지정가능)</sub></label>
+				</li>
+			</ul>
+		</fieldset>
+		<div>
+			<input type="submit" value="주문하기"><br>
+			<input type="reset" value="취소하기">
+		</div>
+	</form>
+</body>
+</html>

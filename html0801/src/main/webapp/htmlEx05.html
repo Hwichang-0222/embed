@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex05</title>
+	<style>
+		table, th, td{
+			border: 1px double #cdcdcd;
+		}
+		th {
+			background: #dddddd;
+		}
+		td[colspan="3"] input {
+			width : 90%;
+
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td rowspan="4" style="text-align: center">
+					<label for="photo">사진<br>(3*4)</label><br>
+					<input type="file" name="photo">
+				</td>
+				<th><label for="name">이름</label></th>
+				<td><input type="text" name="name"></td>
+				<th>성별</th>
+				<td>
+					<input type="radio" name="gender" value="male">
+					<label for="gender_male"> 남자 </label>
+					<input type="radio" name="gender" value="female">
+					<label for="gender_female"> 여자 </label>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="date">생년월일</label></th>
+				<td><input type="date" name="date"></td>
+				<th><label for="phone">연락처</label></th>
+				<td><input type="tel" name="phone"></td>
+			</tr>
+			<tr>
+				<th><label for="mail">이메일</label></th>
+				<td colspan="3"><input type="email" name="mail"></td>
+			</tr>
+			<tr>
+				<th><label for="addr">주소</label></th>
+				<td colspan="3"><input type="text" name="addr"></td>
+			</tr>
+			<tr>
+				<th><label for="exper">경력</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="exper"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="intro">자기소개</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="intro"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="apply">지원동기</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="apply"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="licen">자격증</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="licen"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="5" style="text-align: center;">
+					<button type="submit">저장</button>
+					<button type="reset">취소</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

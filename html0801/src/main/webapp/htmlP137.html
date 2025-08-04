@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 137 Example</title>
+</head>
+<body>
+	<h2>상품 선택 화면</h2>
+	<fieldset>
+		<legend>상품 선택</legend>
+		<p><b>주문할 상품을 선택해 주세요.</b></p>
+		<ul>
+			<li>
+				<input type="checkbox" name="prod" value="s_3">
+				<label for="prod_s_3" id="prod_s_3"> 선물용 3Kg </label>
+				<input type="number" min="0" max="5" name="prod_s_3_count">개 (최대 5개)
+			</li>
+			<li>
+				<input type="checkbox" name="prod" value="s_5">
+				<label for="prod_s_5" id="prod_s_5"> 선물용 5Kg </label>
+				<input type="number" min="0" max="5" name="prod_s_5_count">개 (최대 5개)
+			</li>
+			<li>
+				<input type="checkbox" name="prod" value="f_3">
+				<label for="prod_f_3" id="prod_f_3"> 가정용 3Kg </label>
+				<input type="number" min="0" max="5" name="prod_f_3_count">개 (최대 5개)
+			</li>
+			<li>
+				<input type="checkbox" name="prod" value="f_5">
+				<label for="prod_f_5" id="prod_f_5"> 가정용 5Kg </label>
+				<input type="number" min="0" max="5" name="prod_f_5_count">개 (최대 5개)
+			</li>
+		</ul>
+		<p><b>포장 선택</b></p>
+		<ul>
+			<li>
+				<input type="radio" name="gift" value="yes">
+				<label for="gift_yes" id="gift_yes"> 선물 포장</label>
+			</li>
+			<li>
+				<input type="radio" name="gift" value="no">
+				<label for="gift_no" id="gift_no"> 선물 포장 안 함</label>
+			</li>
+		</ul>
+	</fieldset>
+</body>
+</html>

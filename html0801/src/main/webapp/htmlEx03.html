@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex03</title>
+	<style>
+		table, th, td{
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;">회원정보입력</h1>
+	<form>
+		<table>
+			<caption>회원가입</caption>
+			<tr>
+				<td><label for="name">이름</label></td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td><label for="id">아이디</label></td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td><label for="pwd1">패스워드</label>	</td>
+				<td><input type="password" name="pwd1"></td>
+			</tr>
+			<tr>
+				<td><label for="pwd2">패스워드 확인</label>	</td>
+				<td><input type="password" name="pwd2"></td>
+			</tr>
+			<tr>
+				<td><label for="mail">이메일</label></td>
+				<td><input type="email" name="mail"></td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>
+					<input type="checkbox" name="hobby" value="read">
+					<label for="hobby_read">독서 </label>
+					<input type="checkbox" name="hobby" value="cook">
+					<label for="hobby_cook">요리 </label>
+					<input type="checkbox" name="hobby" value="jogg">
+					<label for="hobby_jogg">조깅 </label>
+					<input type="checkbox" name="hobby" value="swin">
+					<label for="hobby_swin">수영 </label>
+					<input type="checkbox" name="hobby" value="slee">
+					<label for="hobby_slee">취침 </label>
+				</td>
+			</tr>
+			<tr>
+				<td>전공</td>
+				<td>
+					<input type="radio" name="majer" value="kor">
+					<label for="majer_kor">국어 </label>
+					<input type="radio" name="majer" value="eng">
+					<label for="majer_eng">영어 </label>
+					<input type="radio" name="majer" value="mat">
+					<label for="majer_mat">수학 </label>
+					<input type="radio" name="majer" value="dis">
+					<label for="majer_dis">디자인</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="phone">전화번호</label></td>
+				<td>
+					<select id="phone_com">
+						<option value="skt">SKT</option>
+						<option value="kt">KT</option>
+						<option value="lgu">LG U+</option>
+					</select>
+					<input type="tel" name="phone">
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<button type="submit">전송</button>
+					<button type="reset">초기화</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

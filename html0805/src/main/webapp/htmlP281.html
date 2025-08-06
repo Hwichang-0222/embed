@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 281 Example</title>
+	<style>
+		p {
+			width:500px;
+			height: auto;
+			background-color: #eee;
+			border: 1px solid #cdcdcd;
+			line-height: 1.5em;
+			padding: 0px;
+		}
+		
+		#static {
+			position: static;
+			background-color: #ff0000;
+		}
+		
+		#relative-1 {
+			position: relative;
+			background-color: #00ff00;
+		}
+		
+		#relative-2 {
+			position: relative;
+			left: 100px;
+			top: -50px;
+			background-color: #0000ff;
+		}
+		
+		#fixed {
+			position: fixed;
+			width: 100px;
+			height: 100px;
+			right: 30px;
+			top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<p id="static">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, 
+		vitae scelerisque enim ligula venenatis dolor. </p>
+	<p id="relative-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, 
+		vitae scelerisque enim ligula venenatis dolor.</p>
+	<p id="relative-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, 
+		vitae scelerisque enim ligula venenatis dolor. </p>
+	<p id="fixed"></p>
+</body>
+</html>

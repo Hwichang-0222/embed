@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page 325 Example</title>
+	<style>
+		body {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			gap: 5px;
+		}
+		
+		#container {
+			border: 1px solid #000000;
+			width: 200px;
+			height: 400px;
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.fill {
+			object-fit: fill;
+		}
+		
+		.contain {
+			object-fit: contain;
+		}
+		
+		.cover {
+			object-fit: cover;
+		}
+		
+		.none {
+			object-fit: none;
+		}
+		
+		.scale-down {
+			object-fit: scale-down;
+		}
+	</style>
+</head>
+<body>
+	
+		<div id="container">
+			<img alt="고냥이" src="images/cat4.png" class="fill">
+			<h3>object-fit: fill</h3>
+		</div>
+		<div id="container">
+			<img alt="고냥이" src="images/cat4.png" class="contain">
+			<h3>object-fit: contain</h3>
+		</div>
+		<div id="container">
+			<img alt="고냥이" src="images/cat4.png" class="cover">
+			<h3>object-fit: cover</h3>
+		</div>
+		<div id="container">
+			<img alt="고냥이" src="images/cat4.png" class="none">
+			<h3>object-fit: none</h3>
+		</div>
+		<div id="container">
+			<img alt="고냥이" src="images/cat4.png" class="scale-down">
+			<h3>object-fit: scale-down</h3>
+		</div>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page 405~411 Example</title>
+	<style>
+		ul li{
+			list-style-type: none;
+			display: inline-block;
+			margin: 0px 30px;
+			padding-left: 30px;
+		}
+	
+		a[target = _blank] {
+			padding-right: 30px;
+			background: yellow;
+		}
+		
+		[class ~= button] {
+			box-shadow: rgba(0, 0, 0, 0.4) 4px 4px;
+			border:1px solid #222222;
+			border-radius: 5px;
+		}
+		
+		a[title |= us] {
+			background: url("images/us.png") no-repeat left center;
+		}
+		
+		a[title ^= "ch"] {
+			background: url("images/ch.png") no-repeat left center;
+		}
+		
+		[href $= txt] {
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend>Main Menu</legend>
+		<ul>
+			<li><a href="https://html.spec.whatwg.org" target="_blank">HTML</a></li>
+			<li><a href="#" class="flat">Menu 1</a></li>
+			<li><a href="#" class="button">Menu 2</a></li>
+			<li><a href="#" class="flat button">Menu 3</a></li>
+		</ul>
+	</fieldset>
+	<fieldset>
+		<legend>Foreign Service</legend>
+		<ul>
+			<li><a href="#" title="us-english">English</a></li>
+			<li><a href="file/text.txt" title="ja">Japan</a></li>
+			<li><a href="#" title="ch">China</a></li>
+		</ul>
+	</fieldset>
+</body>
+</html>

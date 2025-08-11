@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<title>Page 446 Example</title>
+	<style>
+		.origin img {
+			border-radius: 50%;
+		}
+		
+		.gallery {
+			box-sizing: border-box;
+			display: grid;
+			grid-template-columns: repeat(5,1fr);
+			gap: 5px
+		}
+		
+		.gallery img {
+			width: 80%;
+			border-radius: 50%;
+		}
+		
+		.title {
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		
+		.image-container {
+			border: 1px solid #cdcdcd;
+			border-radius: 5px;
+			padding: 10px;
+			background-color: #f9f9f9;
+		}
+		
+		
+		.blur {filter: blur(5px);}
+		.brightness {filter: brightness(2);}
+		.contrast {filter: contrast(200%);}
+		.drop-shadow {filter: drop-shadow(16px 16px 10px black);}
+		.grayscale {filter: grayscale(100%);}
+		.sepia {filter: sepia(100%);}
+		.opacity {filter: opacity(50%);}
+		.hue-rotate {filter: hue-rotate(90deg);}
+		.saturate {filter: saturate(200%);}
+	</style>
+</head>
+<body>
+	<div class="origin">
+		<img alt="cat" src="images/cat2.jpg">
+	</div>
+	<div class="gallery">
+		<div class="image-container">
+			<div class="title">filter:blur(5px)</div>
+			<img alt="cat" src="images/cat2.jpg" class="blur">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:brightness(2)</div>
+			<img alt="cat" src="images/cat2.jpg" class="brightness">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:contrast(200%)</div>
+			<img alt="cat" src="images/cat2.jpg" class="contrast">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:drop-shadow(16px 16px 10px black)</div>
+			<img alt="cat" src="images/cat2.jpg" class="drop-shadow">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:grayscale(100%)</div>
+			<img alt="cat" src="images/cat2.jpg" class="grayscale">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:invert(100%)</div>
+			<img alt="cat" src="images/cat2.jpg" class="invert">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:sepia(100%)</div>
+			<img alt="cat" src="images/cat2.jpg" class="sepia">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:opacity(50%)</div>
+			<img alt="cat" src="images/cat2.jpg" class="opacity">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:hue-rotate(90deg)</div>
+			<img alt="cat" src="images/cat2.jpg" class="hue-rotate">
+		</div>
+		<div class="image-container">
+			<div class="title">filter:saturate(200%)</div>
+			<img alt="cat" src="images/cat2.jpg" class="saturate">
+		</div>
+	</div>
+</body>
+</html>

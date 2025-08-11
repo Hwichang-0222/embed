@@ -4,19 +4,59 @@
 <meta charset="UTF-8">
 <title>Ex05</title>
 	<style>
+		div {
+			width: 850px;
+			margin: 0px auto;
+		}
+		
+		h1 {
+			text-align: center;
+			letter-spacing: 2px;
+			font-size: 28px;
+		}
+	
 		table, th, td{
-			border: 1px double #cdcdcd;
+			border: 1px solid #9e9e9e;
+		}
+		th, td {
+			border-top-color: #222222;
+			border-left-color: #222222; 
 		}
 		th {
-			background: #dddddd;
+			background: #c0c0c0;
+			font-weight: 400;
 		}
+		td input:not([type=radio]) {
+			width: calc(100% - 10px);
+			margin: 0px auto;
+			display: flex;
+		}
+		
+		#gender{
+			text-align: center;
+		}
+		
 		td[colspan="3"] input {
 			width : 90%;
-
+			margin: 0px auto;
+			display: flex;
+		}
+		
+		td[colspan="4"] {
+			padding: 0 5px 2px 5px;
+		}
+		
+		textarea {
+			width: calc(100% - 20px);
+			margin: 1px auto;
+			display: flex;
 		}
 	</style>
 </head>
 <body>
+<div>
+	<h1>지원서</h1>
+
 	<form>
 		<table>
 			<tr>
@@ -27,7 +67,7 @@
 				<th><label for="name">이름</label></th>
 				<td><input type="text" name="name"></td>
 				<th>성별</th>
-				<td>
+				<td id="gender">
 					<input type="radio" name="gender" value="male">
 					<label for="gender_male"> 남자 </label>
 					<input type="radio" name="gender" value="female">
@@ -72,5 +112,6 @@
 			</tr>
 		</table>
 	</form>
+	</div>
 </body>
 </html>

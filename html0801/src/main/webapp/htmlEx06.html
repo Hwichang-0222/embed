@@ -4,17 +4,54 @@
 <meta charset="UTF-8">
 <title>Ex06</title>
 	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
 		table, td, th {
-			border:3px solid #000000;
+			border:2px solid #000000;
 			border-collapse: collapse;
 		}
 		td, th {
 			padding:3px;
 			text-align: left;
 			vertical-align: middle;
-			}
+			font-size: 14px
+		}
+		td {
+			width: 160px;
+		}
+		
+		tr th:nth-child(2) {
+			width: 130px;
+		}
+		
+		input:not([type=radio]) {
+			width: 140px;
+		}
 		th {
 			background: #fecccb;
+			font-weight: 500;
+			text-align: center;
+			width: 120px;
+		}
+		button {
+			font-size: 13px;
+			line-height:13px;
+			word-spacing: 13px;
+			padding: 0 10px 3px 10px;
+			margin: auto 3px;
+		}
+		#address {
+			width: 90%;
+		}
+		#restAddress {
+			width: 50%;
+		}
+		input[type=password]{
+			width: 80%
 		}
 
 </style>
@@ -26,7 +63,7 @@
 				<th>사용자 ID</th>
 				<td colspan="3">
 					<input type="text" name="id">
-					<input type="submit" value="ID중복확인" name="idCheck">
+					<button type="button">ID중복확인</button>
 				</td>
 			</tr>
 			<tr>
@@ -72,19 +109,19 @@
 					<input type="text" name="firstAddressNumber">
 					-
 					<input type="text" name="secondAddressNumber">
-					<input type="submit" value="우편번호검색" name="AddressCheck">
+					<button type="button">우편번호검색</button>
 				</td>
 			</tr>
 			<tr>
 				<th>주 소</th>
 				<td colspan="3">
-					<input type="text" name="address" style="width: 80%">
+					<input type="text" name="address" id="address">
 				</td>
 			</tr>
 			<tr>
 				<th>나머지 주소</th>
 				<td colspan="3">
-					<input type="text" name="restAddress">
+					<input type="text" name="restAddress" id="restAddress">
 				</td>
 			</tr>
 			<tr>
@@ -104,7 +141,7 @@
 					<select name="class" id="class">
 						<option value="">선택하세요</option>
 						<option value="machine">기계/공학</option>
-						<option value="computer">컴퓨터/정보통신</option>
+						<option value="computer" selected>컴퓨터/정보통신</option>
 						<option value="medical">의료</option>
 					</select>
 				</td>

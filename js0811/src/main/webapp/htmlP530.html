@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 530 Example</title>
+	<style>
+		table, th, td {
+			border: 1px solid #000000;
+		}
+		
+		th {
+			background-color: #cdcdcd;
+		}
+	</style>
+</head>
+<body>
+	<div id = "container">
+		<form action="#">
+			<table>
+				<tr>
+					<th>op1</th>
+					<th>op2</th>
+					<th>result
+						<select id="operator">
+							<option value="and" id="and">&&</option>
+							<option value="or" id="or">||</option>
+						</select>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="op1" value="true" id="op1_true">
+						<label for="op1_true">true</label>
+						<input type="radio" name="op1" value="false" id="op1_false">
+						<label for="op1_false">false</label>
+					</td>
+					<td>
+						<input type="radio" name="op2" value="true" id="op2_true"> 
+						<label for="op2_true">true</label>
+						<input type="radio" name="op2" value="false" id="op2_false">
+						<label for="op2_false">false</label>
+					</td>
+					<td>
+						<span id="res"></span>
+					</td>
+				</tr>
+			</table>
+		</form>	
+	</div>
+	<script>
+		function calculate() {
+		    let operator = document.getElementById('operator').value;
+		    let op1 = document.querySelector('input[name="op1"]:checked')?.value;
+		    let op2 = document.querySelector('input[name="op2"]:checked')?.value;
+		    
+		    // 둘 다 선택되었을 때만 계산
+		    if (op1 && op2) {
+		        let result;
+		        
+		        // 문자열을 boolean으로 변환
+		        let bool1 = op1 === 'true';
+		        let bool2 = op2 === 'true';
+		        
+		        if (operator === 'and') {
+		            result = bool1 && bool2;
+		        } else if (operator === 'or') {
+		            result = bool1 || bool2;
+		        }
+		        
+		        document.getElementById('res').innerHTML = result;
+		    } else {
+		        document.getElementById('res').innerHTML = '결과';
+		    }
+		}
+		
+		document.addEventListener('DOMContentLoaded', function() {
+			document.querySelectorAll('input[type="radio"], select').forEach(function(element) {
+		        element.addEventListener('change', calculate);
+		    });
+		});
+	</script>
+</body>
+</html>

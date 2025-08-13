@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex02 Web Page Value Receiver from Ex01</title>
+</head>
+<body>
+	<h2>htmlEx02.html Page</h2>
+	<div id="id"></div>
+	<div id="pwd"></div>
+	
+	<script>
+		let urlParams = new URLSearchParams(window.location.search);
+		let id = urlParams.get('id');
+		let pwd = urlParams.get('pwd');
+		
+		console.log("ID : " + id);
+		console.log("PW : " + pwd);
+		
+		document.getElementById('id').innerHTML = "ID :" + id;
+		document.getElementById('pwd').innerHTML = "PW :" + pwd;
+	</script>
+</body>
+</html>

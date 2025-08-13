@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 510 Example</title>
+</head>
+<body>
+	<h1>원의 넓이와 원의 둘레 계산</h1>
+	<h2>반지름 : <span id = "radius"></span></h2>
+	<h2>원의 넓이 : <span id = "area"></span></h2>
+	<h2>원 둘레 : <span id = "line"></span></h2>
+	
+	<script>
+	const PI = 3.14;
+	
+/* 	document.getElementById("radiusInput").addEventListener("input", function () {
+		let radius = parseFloat(this.value);
+
+		if (!isNaN(radius)) {
+			let area = PI * radius * radius;
+			let line = 2 * PI * radius;
+
+			document.getElementById("area").innerHTML = area.toFixed(2);
+			document.getElementById("line").innerHTML = line.toFixed(2);
+		} else {
+			document.getElementById("area").innerHTML = "";
+			document.getElementById("line").innerHTML = "";
+		}
+	}); */
+
+	
+	let radius = prompt("반지름을 입력하세요.");
+	let area = PI * radius * radius;
+	let line = 2 * PI * radius;
+	
+	document.getElementById("radius").innerHTML = radius;
+	document.getElementById("area").innerHTML = area.toFixed(2);
+	document.getElementById("line").innerHTML = line.toFixed(2);
+	
+	</script>
+</body>
+</html>

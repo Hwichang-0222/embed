@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 490 Example</title>
+	<style>
+/* 		#heading {
+			color: #0000ff;
+		} */
+	</style>
+	
+</head>
+<body>
+	<h1 id="heading">자바 스크립트</h1>
+	<p id="text">위 텍스트를 클릭해 보세요</p>
+	<script>
+		let heading = document.querySelector('#heading');
+		//alert("heading=", heading);
+		heading.onclick = function() {
+			heading.style.color = "red";
+		}
+	</script>
+</body>
+</html>

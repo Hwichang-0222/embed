@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 509 Example</title>
+</head>
+<body>
+	<h1>사각형의 넓이</h1>
+	<h2>width = </h2><h2 id="width"></h2>
+	<h2>height = </h2><h2 id="height"></h2>
+	<h2>area = </h2><h2 id="area"></h2>
+	
+	<script>
+		let width;
+		let height;
+		
+		width = prompt("width");
+		height = prompt("height");
+		
+		let area = width * height;
+		
+		document.getElementById("width").innerHTML = width;
+		document.getElementById("height").innerHTML = height;
+		document.getElementById("area").innerHTML = area;
+		document.write(area);
+	</script>
+</body>
+</html>

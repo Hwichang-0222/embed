@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Clock</title>
+	<link rel="stylesheet" href="css/index_style.css">
+</head>
+<body class="theme-blue">
+	<div class="clock-container">
+		<div id="timeDisplay" class="time-display">00:00:00</div>
+		<div id="dateDisplay" class="date-display">2024년 1월 1일 월요일</div>
+		
+		<div class="controls">
+            <button class="btn active" id="format24" onclick="setTimeFormat(true)">24시간</button>
+            <button class="btn" id="format12" onclick="setTimeFormat(false)">12시간</button>
+        </div>
+        
+        <div class="controls" style="margin-top: 1rem;">
+            <button class="btn" onclick="changeTheme('theme-blue')">🔵 파랑</button>
+            <button class="btn" onclick="changeTheme('theme-pink')">🌸 핑크</button>
+            <button class="btn" onclick="changeTheme('theme-green')">🌿 그린</button>
+            <button class="btn" onclick="changeTheme('theme-dark')">⚫ 다크</button>
+			<button class="btn" onclick="changeTheme('theme-sunset')">🌅 선셋</button>
+        </div>
+        
+        <div class="format-info" id="formatInfo">24시간 형식</div>
+        
+		<div class="theme-status">
+			<div class="status-title">현재 테마</div>
+			<div class="status-current" id="currentTheme">🔵 파랑 테마</div>
+		</div>
+    </div>
+    <script src="js/index_js.js"></script>
+</body>
+</html>

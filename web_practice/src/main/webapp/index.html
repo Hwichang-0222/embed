@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Netflix 스타일 랜딩</title>
+	<link rel="stylesheet" href="css/index_style.css" />
+</head>
+<body>
+	<header class="nf-header">
+		<div class="container">
+			<div class="brand">NETFLIX</div>
+			<nav class="nav">
+				<button class="btn ghost" aria-label="언어 선택">한국어</button>
+				<button class="btn primary">로그인</button>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<h1>영화와 시리즈를 무제한으로</h1>
+				<p>다양한 디바이스에서 자유롭게 시청하세요. 언제든지 해지 가능합니다.</p>
+
+				<form class="signup" onsubmit="return false">
+					<label class="sr-only" for="email">이메일 주소</label>
+					<input id="email" type="email" placeholder="이메일 주소" required />
+					<button class="btn primary" id="cta">시작하기</button>
+				</form>
+			</div>
+		</section>
+
+		<section class="row">
+			<div class="container">
+				<h2>오늘의 인기 콘텐츠</h2>
+				<div class="rail" role="list">
+					<div class="card" role="listitem" aria-label="타이틀 1"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="faq">
+			<div class="container">
+				<h2>자주 묻는 질문</h2>
+
+				<details class="qa">
+					<summary>넷플릭스란 무엇인가요?</summary>
+					<div class="ans">영화, 시리즈, 다큐멘터리를 스트리밍으로 시청할 수 있는 서비스입니다.</div>
+				</details>
+
+				<details class="qa">
+					<summary>요금제는 어떻게 되나요?</summary>
+					<div class="ans">여러 요금제가 있으며 언제든지 변경/해지할 수 있습니다.</div>
+				</details>
+
+				<details class="qa">
+					<summary>어디에서 시청할 수 있나요?</summary>
+					<div class="ans">스마트폰, 태블릿, PC, 스마트TV 등 다양한 기기에서 시청 가능합니다.</div>
+				</details>
+			</div>
+		</section>
+
+		<section class="cta-strip">
+			<div class="container">
+				<h3>시청을 시작할 준비가 되셨나요?</h3>
+				<form class="signup inline" onsubmit="return false">
+					<label class="sr-only" for="email2">이메일 주소</label>
+					<input id="email2" type="email" placeholder="이메일 주소" required />
+					<button class="btn primary">시작하기</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="nf-footer">
+		<div class="container">
+			<p>질문이 있으신가요? <a href="#">고객센터에 문의하세요</a>.</p>
+			<ul class="links">
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">계정</a></li>
+				<li><a href="#">투자 정보</a></li>
+				<li><a href="#">쿠키 설정</a></li>
+			</ul>
+			<p class="copyright">이 페이지는 교육용 클론입니다.</p>
+		</div>
+	</footer>
+
+	<script src="js/index_js.js"></script>
+</body>
+</html>

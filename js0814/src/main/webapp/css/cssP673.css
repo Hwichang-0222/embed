@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	height:100vh;
+}
+
+div {
+	margin-bottom:20px;
+}
+
+button{
+	padding:10px 20px;
+	border:1px solid #cdcdcd;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+.disabled{
+	color:#cccccc;
+	background-color:#f0f0f0;
+	border:1px solid #cccccc;
+}
+
+.enabled{
+	color:#ffffff;
+	background-color:#007bff;
+	border:1px solid #007bff;
+}

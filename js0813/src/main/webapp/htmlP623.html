@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 623 Example</title>
+	<style>
+		.container {
+			width: 500px;
+			margin: 10px auto;
+			background-color: LightGray;
+		}
+	</style>
+</head>
+<body>
+	<h1>The Window Location Object</h1>
+	<h2>The origin Property</h2>
+	
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	
+	<button onclick="history.back()">go back</button>
+	<button onclick="history.go(-2)">Go Back 2 Pages</button>
+	
+	<div class="container">
+		<h2>location 객체</h2>
+		<div class="display">
+			<script src="js/jsP623_1.js"></script>
+		</div>
+		<button onclick="location.replace('http://www.naver.com')">naver</button>
+	</div>
+	<script src="js/jsP623.js"></script>
+</body>
+</html>

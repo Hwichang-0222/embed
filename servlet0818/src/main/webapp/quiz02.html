@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz 02</title>
+	<style>
+		body {
+			background-color: #F5F5DC;
+			margin: 0 auto; 
+		}
+	
+		#container {
+			width: 420px;
+			margin: 10px auto;
+		}
+		fieldset{
+			width: 400px;
+			margin:10px;
+		}
+		label {
+			width: 120px;
+			display: inline-block;
+		}
+		button {
+			height: 20px;
+			padding: 0;
+			line-height: 20px;
+		}
+		#buttons button{
+			position: relative;
+			top: -8px;
+			width : 150px;
+			margin-left: 10px;
+		}
+		input {
+			width: 150px;
+}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;">회원정보입력</h1>
+	<div id="container">
+	<form action="#" method="post">
+		<fieldset>
+			<legend>회원 정보 입력</legend>
+			<label for="id">아이디</label>
+			<input type="text" name="id" id="id" autofocus>
+			<button type="button">중복검사</button><br>
+			<label for="pwd1">패스워드</label>
+			<input type="password" name="pwd1"><br>
+			<label for="pwd2">패스워드 확인</label>
+			<input type="password" name="pwd2"><br>
+			<label for="name">이름</label>
+			<input type="text" name="name"><br>
+			<label for="phone">휴대폰 번호</label>
+			<input type="tel" name="phone"><br>
+			<label for="mail">이메일</label>
+			<input type="email" name="amil"><br>			
+			<label for="age_date">생일</label>
+			<input type="date" name="age_date"><br>
+			<label for="site">홈페이지</label>
+			<input type="text" name="site"><br>
+			<input type="radio" name="gender" value="male">
+			<label for="gender_male">남성</label><br>
+			<input type="radio" name="gender" value="female">
+			<label for="gender_female">여성</label><br>
+			</fieldset>
+		<div id="buttons">
+		<button type="submit" onclick="validateId()">제출</button>
+		<button type="reset">초기화</button>
+		</div>
+	</form>
+	</div>
+	
+	<script>
+		function validateId() {
+			const id = document.getElementById("id").value;
+			const regex = /^[a-zA-Z0-9]+$/;
+
+			if (!regex.test(id)) {
+				alert("아이디는 영문과 숫자로만 입력하세요!");
+				return false; // 폼 제출 방지
+			}
+			alert("제출되었습니다.");
+			return true; // 유효하면 폼 제출
+		}
+	
+	</script>
+</body>
+</html>

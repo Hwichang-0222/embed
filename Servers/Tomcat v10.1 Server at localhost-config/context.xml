@@ -26,4 +26,16 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
+    
+    <Resource 
+    	auth="Container"
+    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	url="jdbc:mysql://localhost:3306/embed"
+    	username="root"
+    	password="1111"
+    	name="jdbc/MySQL80"
+    	type="javax.sql.DataSource"
+    	maxActive="4"
+    	maxWait="10000"
+    />
 </Context>

@@ -1,0 +1,237 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 제목 */
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.board-title-link {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.board-title-link:hover {
+    color: #0056b3;
+}
+
+/* 검색 폼 */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.search-form select,
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.btn-search {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #0056b3;
+}
+
+/* 테이블 */
+.board-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.board-table th,
+.board-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.board-table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.board-table th:nth-child(2) {
+    text-align: left;
+}
+
+.board-table td.title-cell {
+    text-align: left !important;
+    padding-left: 10px;
+}
+
+.title-link {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.reply-indent {
+    color: #aaa;
+    margin-right: 5px;
+    font-weight: bold;
+}
+/* 번호 열 */
+.board-table th:nth-child(1),
+.board-table td:nth-child(1) {
+    width: 60px;
+    text-align: center;
+}
+
+/* 제목 열 */
+.board-table th:nth-child(2),
+.board-table td:nth-child(2) {
+    min-width: 250px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* 작성자, 날짜, 조회수 열 */
+.board-table th:nth-child(3),
+.board-table td:nth-child(3),
+.board-table th:nth-child(4),
+.board-table td:nth-child(4),
+.board-table th:nth-child(5),
+.board-table td:nth-child(5) {
+    width: 120px;
+    text-align: center;
+}
+
+.title-link {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 데이터 없음 */
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-style: italic;
+}
+
+/* 페이지네이션 */
+.pagination-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.page-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+    background: #e6f0ff;
+    border-color: #007bff;
+    color: #0056b3;
+}
+
+.page-btn.current {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+    cursor: default;
+}
+
+/* 글쓰기 버튼 */
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input,
+    .search-form select {
+        width: 100%;
+    }
+
+    .board-table th,
+    .board-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}

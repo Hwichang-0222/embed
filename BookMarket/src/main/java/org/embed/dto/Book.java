@@ -10,12 +10,13 @@ public class Book implements Serializable{
 	private String name;
 	private int unitPrice;
 	private String author;
-	private String descriprion;
+	private String description;
 	private String publisher;
 	private String category;
 	private long unitsInStock;
 	private String releaseDate;
 	private String condition;
+	private String filename;
 	
 	public Book() {
 		super();
@@ -60,12 +61,12 @@ public class Book implements Serializable{
 		this.author = author;
 	}
 
-	public String getDescriprion() {
-		return descriprion;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescriprion(String descriprion) {
-		this.descriprion = descriprion;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getPublisher() {
@@ -106,5 +107,13 @@ public class Book implements Serializable{
 
 	public void setCondition(String condition) {
 		this.condition = condition;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 }

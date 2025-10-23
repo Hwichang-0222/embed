@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>board</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+	<div class="container">
+		<h1>⚠️ 오류가 발생했습니다</h1>
+		
+		<div class="error-message">
+			<h3>오류 메시지:</h3>
+			<p th:text="${message}">에러 메시지</p>
+		</div>
+		
+		<div class="stack-trace">
+			<h3>상세 정보 (Stack Trace):</h3>
+			<ul>
+				<li th:each="trace : ${stackTraceList}" th:text="${trace}"></li>
+			</ul>
+		</div>
+		
+		<a href="/" class="back-link">홈으로 돌아가기</a>
+	</div>
+</body>
+</html>

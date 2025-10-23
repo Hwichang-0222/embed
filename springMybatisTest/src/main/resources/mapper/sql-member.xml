@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="org.embed.mapper.MemberMapper">
+
+	<insert id="insertMember" parameterType="org.embed.domain.MemberDTO">
+		<![CDATA[
+			INSERT INTO
+			member
+			(
+				id,
+				password,
+				name,
+				gender,
+				birth,
+				mail,
+				phone,
+				address,
+				regist_day
+			)
+			VALUES
+			(
+				#{id},
+				#{password},
+				#{name},
+				#{gender},
+				#{birth},
+				#{mail},
+				#{phone},
+				#{address},
+				NOW()
+			)
+		]]>
+	</insert>
+	
+	<select id="selectMemberList" resultType="org.embed.domain.MemberDTO">
+		<![CDATA[
+			SELECT
+				id,
+				password,
+				name,
+				gender,
+				birth,
+				mail,
+				phone,
+				address,
+				regist_day
+			FROM
+				member
+			ORDER BY regist_day DESC
+		]]>
+	</select>
+	
+	<select id="selectMemberDetail" parameterType="String" resultType="org.embed.domain.MemberDTO">
+		<![CDATA[
+			SELECT
+				id,
+				password,
+				name,
+				gender,
+				birth,
+				mail,
+				phone,
+				address,
+				regist_day
+			FROM
+				member
+			WHERE
+				id = #{id} 
+		]]>
+	</select>
+	
+	<update id="updateMember" parameterType="org.embed.domain.MemberDTO">
+		<![CDATA[
+			UPDATE
+				member
+			SET
+				password = #{password},
+				mail = #{mail},
+				phone = #{phone},
+				address = #{address}			
+			WHERE
+				id = #{id} 
+		]]>
+	</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		<![CDATA[
+			DELETE FROM
+				member
+			WHERE
+				id = #{id} 
+		]]>
+	</delete>
+
+</mapper>

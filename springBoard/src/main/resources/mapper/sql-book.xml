@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.embed.mapper.BookMapper">
+
+	<!-- 모든 도서 조회 -->
+	<select id="selectAllBooks" resultType="org.embed.dto.BookDTO">
+		<![CDATA[
+			SELECT
+				b_id as bookId,
+				b_name as name,
+				b_unitPrice as unitPrice,
+				b_author as author,
+				b_description as description,
+				b_publisher as publisher,
+				b_category as category,
+				b_unitsInStock as unitsInStock,
+				b_releaseDate as releaseDate,
+				b_condition as `condition`,
+				b_filename as filename
+			FROM
+				book
+			ORDER BY b_id DESC
+		]]>
+	</select>
+	
+	<!-- 도서 ID로 조회 -->
+	<select id="selectBookById" parameterType="String" resultType="org.embed.dto.BookDTO">
+		<![CDATA[
+			SELECT
+				b_id as bookId,
+				b_name as name,
+				b_unitPrice as unitPrice,
+				b_author as author,
+				b_description as description,
+				b_publisher as publisher,
+				b_category as category,
+				b_unitsInStock as unitsInStock,
+				b_releaseDate as releaseDate,
+				b_condition as `condition`,
+				b_filename as filename
+			FROM
+				book
+			WHERE
+				b_id = #{bookId}
+		]]>
+	</select>
+	
+	<!-- 도서 등록 -->
+	<insert id="insertBook" parameterType="org.embed.dto.BookDTO">
+		<![CDATA[
+			INSERT INTO book
+			(
+				b_id, b_name, b_unitPrice, b_author, 
+				b_description, b_publisher, b_category, 
+				b_unitsInStock, b_releaseDate, b_condition, 
+				b_filename
+			)
+			VALUES
+			(
+				#{bookId}, #{name}, #{unitPrice}, #{author},
+				#{description}, #{publisher}, #{category},
+				#{unitsInStock}, #{releaseDate}, #{condition},
+				#{filename}
+			)
+		]]>
+	</insert>
+	
+	<!-- 도서 수정 -->
+	<update id="updateBook" parameterType="org.embed.dto.BookDTO">
+		<![CDATA[
+			UPDATE book
+			SET
+				b_name = #{name},
+				b_unitPrice = #{unitPrice},
+				b_author = #{author},
+				b_description = #{description},
+				b_publisher = #{publisher},
+				b_category = #{category},
+				b_unitsInStock = #{unitsInStock},
+				b_releaseDate = #{releaseDate},
+				b_condition = #{condition}
+		]]>
+		<if test="filename != null and filename != ''">
+			, b_filename = #{filename}
+		</if>
+		<![CDATA[
+			WHERE
+				b_id = #{bookId}
+		]]>
+	</update>
+	
+	<!-- 도서 삭제 -->
+	<delete id="deleteBook" parameterType="String">
+		<![CDATA[
+			DELETE FROM book
+			WHERE b_id = #{id}
+		]]>
+	</delete>
+	
+</mapper>

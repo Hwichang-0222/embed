@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.embed.bbs.mapper.BbsMapper">
+
+    <!-- ✅ 게시글 목록 (페이징 포함) -->
+	<select id="getPagedBbs" parameterType="map" resultType="org.embed.bbs.dto.BbsDTO">
+	    SELECT
+	        num, id, name, subject, content,
+	        regist_day AS registDay, hit, ip
+	    FROM board
+	    ORDER BY num DESC
+	    LIMIT #{limit} OFFSET #{offset}
+	</select>
+	
+	<!-- ✅ 총 게시글 수 -->
+	<select id="getBbsCount" resultType="int">
+	    SELECT COUNT(*) FROM board
+	</select>
+
+    <!-- 상세 조회 -->
+    <select id="getBbsByNum" parameterType="int" resultType="org.embed.bbs.dto.BbsDTO">
+        SELECT
+            num, id, name, subject, content,
+            regist_day AS registDay,
+            hit, ip
+        FROM board
+        WHERE num = #{num}
+    </select>
+
+    <!-- 등록 -->
+    <insert id="insertBbs" parameterType="org.embed.bbs.dto.BbsDTO">
+        INSERT INTO board (id, name, subject, content, regist_day, hit, ip)
+        VALUES (#{id}, #{name}, #{subject}, #{content}, NOW(), 0, #{ip})
+    </insert>
+
+    <!-- 수정 -->
+    <update id="updateBbs" parameterType="org.embed.bbs.dto.BbsDTO">
+        UPDATE board
+        SET subject = #{subject}, content = #{content}
+        WHERE num = #{num}
+    </update>
+
+    <!-- 삭제 -->
+    <delete id="deleteBbs" parameterType="int">
+        DELETE FROM board WHERE num = #{num}
+    </delete>
+
+    <!-- 조회수 증가 -->
+    <update id="updateHitCount" parameterType="int">
+        UPDATE board SET hit = hit + 1 WHERE num = #{num}
+    </update>
+</mapper>

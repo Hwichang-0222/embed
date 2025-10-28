@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 586 Quiz 07</title>
+</head>
+<body>
+	<div></div>
+	
+	<script>
+		let n1 = prompt("number1");
+		let n2 = prompt("number2");
+		
+		(function compare(n1, n2) {
+			if ((n1 !== null) && (n2 !== null)){
+				if (n1 === n2){
+					document.write("두 수가 같습니다.");
+				} else if (n1 > n2) {
+					document.write(`${n1}가 ${n2}보다 큽니다.`);
+				} else {
+					document.write(`${n2}가 ${n1}보다 큽니다.`);
+				}
+				
+			}
+		}(n1, n2));
+		
+		
+	
+	</script>
+
+</body>
+</html>

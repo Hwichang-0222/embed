@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.times {
+	display: flex;
+	border: 1px solid #cdcdcd;
+	margin: 10px;
+}

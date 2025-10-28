@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 655 Example</title>
+</head>
+<body>
+	<h1>Web Programming</h1>
+	<ul id="itemlist">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Javascript</li>
+	</ul>
+	
+	<script>
+		let newItem = document.createElement("li");
+		let textNode = document.createTextNode("Typescript");
+		newItem.appendChild(textNode);
+		document.querySelector('ul').appendChild(newItem);
+		
+		let newImg = document.createElement("img");
+		newImg.src = "images/books.png";
+		document.body.appendChild(newImg);
+	</script>
+</body>
+</html>

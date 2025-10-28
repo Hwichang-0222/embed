@@ -1,0 +1,543 @@
+@charset "UTF-8";
+
+/* ========================================
+   전역 스타일
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Malgun Gothic', '맑은 고딕', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ========================================
+   레이아웃
+======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================================
+   헤더
+======================================== */
+
+.header {
+    background: white;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.welcome-message {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* ========================================
+   네비게이션
+======================================== */
+
+.nav-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-links a,
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-link:hover {
+    background: #357abd;
+}
+
+/* ========================================
+   카드
+======================================== */
+
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* ========================================
+   폼 스타일
+======================================== */
+
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-fieldset {
+    border: none;
+    padding: 0;
+}
+
+.form-legend {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-list {
+    list-style: none;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-input,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-input:disabled,
+input:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+input[readonly] {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* 라디오 버튼 */
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* ========================================
+   버튼
+======================================== */
+
+.btn,
+button[type="submit"],
+input[type="submit"] {
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-primary,
+button[type="submit"],
+input[type="submit"] {
+    background: #4a90e2;
+    color: white;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background: #357abd;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background: #5cb85c;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #4cae4c;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger {
+    background: #d9534f;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c9302c;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   테이블
+======================================== */
+
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.data-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.data-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.data-table a:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+/* ========================================
+   액션 링크
+======================================== */
+
+.action-link {
+    color: #4a90e2;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.action-link:hover {
+    background: #e3f2fd;
+    text-decoration: underline;
+}
+
+.action-link-danger {
+    color: #d9534f;
+}
+
+.action-link-danger:hover {
+    background: #fdeaea;
+}
+
+/* ========================================
+   검색 폼
+======================================== */
+
+.search-form {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-select,
+.search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-select {
+    min-width: 150px;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ========================================
+   페이지네이션
+======================================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.page-number {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.page-number:hover {
+    background: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+}
+
+.page-number.current {
+    background: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+    font-weight: bold;
+}
+
+/* ========================================
+   iframe
+======================================== */
+
+.iframe-container {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+/* ========================================
+   유틸리티 클래스
+======================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+
+/* ========================================
+   반응형 디자인
+======================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header {
+        padding: 20px 10px;
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+    }
+    
+    .nav-links a,
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .data-table {
+        font-size: 13px;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 8px;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .search-select,
+    .search-input {
+        width: 100%;
+    }
+    
+    .table-container {
+        margin: 10px -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .form-legend {
+        font-size: 18px;
+    }
+    
+    .btn,
+    button[type="submit"],
+    input[type="submit"] {
+        width: 100%;
+    }
+}

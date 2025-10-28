@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 678 Quiz 07</title>
+	<style>
+		form {
+			margin-bottom:30px;
+		}
+		input[type="text"] {
+			width:30px;
+			height:20px;
+			text-align: center;
+		}
+		button {
+			margin-left:10px;
+		}
+		table {
+			width:300px;      
+		}
+		table, td {
+			border:1px solid #ccc;
+			border-collapse: collapse;
+		}
+		td {
+			padding:10px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="text" id="rCount" value="1">행 
+		<input type="text" id="cCount" value="1">열    
+		<button onclick="drawTable(); return false;">작성</button>
+	</form>
+	<div id="contents"></div>
+	
+	<script src="js/jsP678.js"></script>
+</body>
+</html>

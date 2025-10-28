@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 579 Example</title>
+</head>
+<body>
+	<script>
+		let hi = function(user) {
+			document.write(user + "님 안녕하세요?<br>");
+		}
+		
+		hi("홍길동");
+		
+		//화살표 함수
+		let hi1 = user => {document.write(`${user}님, 안녕하세요?<br>`)};
+		hi1("이순신");
+		
+		let hi2 = user => document.write(`${user}님, 안녕하세요?<br>`);
+		hi1("강감찬");
+		
+		let sum = (n1, n2) => n1 + n2;
+		let result = sum(10, 30);
+		document.write(`total : ${result}`);
+		
+	</script>
+</body>
+</html>

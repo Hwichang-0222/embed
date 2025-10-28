@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Html Lotto source</title>
+</head>
+<body>
+	<h1>로또 번호 생성기</h1>
+	<div>로또 번호 : <span id="res"></span></div>
+	
+	<script>
+		let lotto = [];
+		
+		for (i = 0; lotto.length < 6; i++){
+			let lottoNum = parseInt(Math.random() * 45 + 1);
+			
+			if (lotto.indexOf(lottoNum) == -1){
+				lotto.push(lottoNum);
+			}
+		}
+				
+		document.getElementById("res").innerHTML = lotto;
+		
+	</script>
+</body>
+</html>

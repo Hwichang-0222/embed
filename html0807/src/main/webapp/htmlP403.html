@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page 403 Example</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			background-color: #cdcdcd;
+			padding: 20px;
+		}
+		
+		#loginForm {
+			background-color: #ffffff;
+			border: 1px solid #222222;
+			border-radius: 5px;
+			padding: 20px;
+			width: 400px;
+			margin: 30px auto;
+		}
+		
+		#loginForm fieldset {
+			border: 1px solid #cdcdcd;
+			margin-bottom: 30px;  
+		}
+		
+		#loginForm legend {
+			font-weight: bold;
+			font-size: 16px;
+			padding-left: 5px;
+			padding-bottom: 10px;
+		}
+		
+		#loginForm ul li {
+			list-style-type: none;
+			line-height: 30px;
+			padding: 5px 10px;
+			margin-bottom: 2px;
+		}
+		
+		#loginForm label {
+			float: left;
+			font-size: 13px;
+			width: 110px;
+		}
+		
+		button {
+			border: 1px solid #222222;
+			border-radius: 20px;
+			font-size: 16px;
+			padding: 7px 25px;
+			margin: auto;
+			letter-spacing: 2px;
+			display: block;
+		}
+		
+		#loginForm input[type=text],
+		#loginForm input[type=password],
+		#loginForm input[type=tel],
+		#loginForm input[type=email] {
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			font-size: 13px;
+			padding: 5px;
+			width: 200px;
+		}
+		
+		#loginForm input[required] {
+			border: 1px red solid;
+		}
+		
+		#loginForm input[readonly] {
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<form id="loginForm">
+		<fieldset>
+			<legend>로그인 정보</legend>
+			<ul>
+				<li>
+					<label for="id">아이디</label>
+					<input id="id" name="id" type="text" required autofocus placeholder="input your ID">
+				</li>
+				<li>
+					<label for="pwd1">비밀번호</label>
+					<input id="pwd1" name="pwd1" type="password" required>
+				</li>
+				<li>
+					<label for="pwd2">비밀번호 확인</label>
+					<input id="pwd2" name="pwd2" type="password" required>
+				</li>
+				<li>
+					<label for="grade">회원 등급</label>
+					<input id="grade" name="grade" type="text" value="준회원" readonly="readonly">
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>개인 정보</legend>
+				<ul>
+				<li>
+					<label for="name">이름</label>
+					<input id="name" name="name" type="text" required placeholder="5자미만 공백없이">
+				</li>
+				<li>
+					<label for="mail">메일주소</label>
+					<input id="mail" name="mail" type="email" required>
+				</li>
+				<li>
+					<label for="phone">연락처</label>
+					<input id="phone" name="phone" type="tel" required>
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<button type="submit">제출</button>
+		</fieldset>
+	</form>
+</body>
+</html>

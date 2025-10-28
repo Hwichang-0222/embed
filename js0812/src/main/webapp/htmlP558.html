@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 558 Example</title>
+</head>
+<body>
+	<h2>함수를 사용해 두수를 더하기</h2>
+
+	<div>
+		<div>function addNumber(<em id="n1">num1</em>, <em id="n2">num2</em>){</div><br>
+		<div>&nbsp;&nbsp;<em id="s1">let sum</em>=<em id="n11">num1</em> + <em id="n22">num2</em>;</div><br>
+		<div>&nbsp;&nbsp;return <em id="s11">sum;</em></div><br>
+		<div>}</div>
+	</div>
+
+	<script>
+		let num1=parseInt(prompt("num1을 입력하세요 : ")); 
+		let num2=parseInt(prompt("num2을 입력하세요 : ")); 
+
+		function addNumber(num1, num2){
+			let sum=num1 + num2;
+			document.getElementById("s1").innerHTML=sum;
+			document.getElementById("s11").innerHTML=sum;
+			return sum;
+		}
+      
+		let result = addNumber(num1, num2);
+		console.log(`addNumber 반환값: ${result}`);
+      
+		document.getElementById("n1").innerHTML=num1;
+		document.getElementById("n2").innerHTML=num2;
+		document.getElementById("n11").innerHTML=num1;
+		document.getElementById("n22").innerHTML=num2;
+      
+	</script>
+</body>
+</html>

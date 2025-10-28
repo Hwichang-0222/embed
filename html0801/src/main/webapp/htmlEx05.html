@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex05</title>
+	<style>
+		div {
+			width: 850px;
+			margin: 0px auto;
+		}
+		
+		h1 {
+			text-align: center;
+			letter-spacing: 2px;
+			font-size: 28px;
+		}
+	
+		table, th, td{
+			border: 1px solid #9e9e9e;
+		}
+		th, td {
+			border-top-color: #222222;
+			border-left-color: #222222; 
+		}
+		th {
+			background: #c0c0c0;
+			font-weight: 400;
+		}
+		td input:not([type=radio]) {
+			width: calc(100% - 10px);
+			margin: 0px auto;
+			display: flex;
+		}
+		
+		#gender{
+			text-align: center;
+		}
+		
+		td[colspan="3"] input {
+			width : 90%;
+			margin: 0px auto;
+			display: flex;
+		}
+		
+		td[colspan="4"] {
+			padding: 0 5px 2px 5px;
+		}
+		
+		textarea {
+			width: calc(100% - 20px);
+			margin: 1px auto;
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1>지원서</h1>
+
+	<form>
+		<table>
+			<tr>
+				<td rowspan="4" style="text-align: center">
+					<label for="photo">사진<br>(3*4)</label><br>
+					<input type="file" name="photo">
+				</td>
+				<th><label for="name">이름</label></th>
+				<td><input type="text" name="name"></td>
+				<th>성별</th>
+				<td id="gender">
+					<input type="radio" name="gender" value="male">
+					<label for="gender_male"> 남자 </label>
+					<input type="radio" name="gender" value="female">
+					<label for="gender_female"> 여자 </label>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="date">생년월일</label></th>
+				<td><input type="date" name="date"></td>
+				<th><label for="phone">연락처</label></th>
+				<td><input type="tel" name="phone"></td>
+			</tr>
+			<tr>
+				<th><label for="mail">이메일</label></th>
+				<td colspan="3"><input type="email" name="mail"></td>
+			</tr>
+			<tr>
+				<th><label for="addr">주소</label></th>
+				<td colspan="3"><input type="text" name="addr"></td>
+			</tr>
+			<tr>
+				<th><label for="exper">경력</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="exper"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="intro">자기소개</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="intro"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="apply">지원동기</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="apply"></textarea></td>
+			</tr>
+			<tr>
+				<th><label for="licen">자격증</label></th>
+				<td colspan="4"><textarea rows="5" cols="80" name="licen"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="5" style="text-align: center;">
+					<button type="submit">저장</button>
+					<button type="reset">취소</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>

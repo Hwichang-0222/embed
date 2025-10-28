@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex01</title>
+	<style>
+		#container {
+			width: 500px;
+			margin: 10px auto;
+		}
+		dt {
+			font-size: 20px;
+			background-color: #0000ff;
+			color: #ffffff;
+			margin-bottom: 10px;
+			padding: 2px 10px 3px 10px;
+			display: inline-block;
+			margin-top: 10px;
+		}
+		
+		dd {
+			margin-left: 15px;
+			margin-bottom: 10px;
+		}
+		
+		h3 {
+			display: inline-block;
+			background: #0000ff;
+			color: #ffffff;
+		}
+		
+		#dl2 dd{
+			margin-left: 15px;
+			margin-bottom: 10px;
+		}
+		
+		.d1 {
+			padding-top: 15px;
+		}
+		
+		#date {
+			margin-left: 25px;
+			height: 20px;
+			width: 130px;
+		} 
+		
+		select {
+			margin-left: 25px;
+		}
+		
+		input[type="text"],
+		input[type="password"],
+		input[type="email"] {
+			width: 450px;
+			height: 30px
+		}
+		
+		#file {
+			width: 450px;
+			height: 35px;
+			background-color: #ffffff;
+			border: 1px solid #cdcdcd;
+			text-align: center;
+		}
+		
+		textarea {
+			width: 450px;
+			height: 150px;
+		}
+		
+		
+		#dl2 button {
+			width: 450px;
+			height: 35px;
+			border: 1px solid #cdcdcd;
+			background-color: #ffffff;	
+		}
+		
+		#res {
+			width: 45%;
+			height: 35px;
+			text-align: center;
+			color: #ffffff;
+			background-color: #474747;
+			margin-left: 0px;
+			
+		}
+		
+		#apply {
+			width: 45%;
+			height: 35px;
+			text-align: center;
+			color: #ffffff;
+			background-color: #0000ff;
+			margin-left: 40px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1 style="text-align: center;">회원가입</h1>
+		<form>
+			<dl>
+				<dt> 필수항목 </dt>
+				<dd><label for="id">아이디</label></dd>
+				<dd><input type="text" name="id"></dd>
+				<dd><label for="pwd">비밀번호</label></dd>
+				<dd><input type="password" name="pwd"></dd>
+				<dd><label for="mail">이메일</label></dd>
+				<dd><input type="email" name="mail" placeholder="example@example.com"></dd>
+				<dd><label for="name">성명</label></dd>
+				<dd><input type="text" name="name" placeholder="홍길동"></dd>
+				<dd><label for="age">나이</label></dd>
+				<dd><input type="text" name="age"></dd>
+			</dl>
+			<dl id="dl2">
+				<dt>당신에 대해서 알고 싶어요!</dt>
+				<dd class="d1">취미를 선택해 주세요</dd>
+				<dd>
+					<input type="radio" name="hobby" value="game">
+					<label for="hobby_game"> 게임하기 </label>
+					<input type="radio" name="hobby" value="music">
+					<label for="hobby_music"> 음악듣기 </label>
+					<input type="radio" name="hobby" value="dirnk">
+					<label for="hobby_drink"> 아이스음료 마시기 </label>
+				</dd>
+				<dd class="d1">좋아하는 음료를 선택해 주세요(중복선택 가능)</dd>
+				<dd>
+					<input type="checkbox" name="like" value="shake">
+					<label for="like_shake"> 쉐이크 종류 음료 </label>
+					<input type="checkbox" name="like" value="tea">
+					<label for="like_tea"> 티 종류 음료 </label>
+					<input type="checkbox" name="like" value="coffee">
+					<label for="like_coffee"> 커피 종류 음료 </label>
+					</dd>
+				<dd class="d1">
+					<label for="date">동아리 참석 가능 날짜 : </label>
+					<input type="date" id="date">
+				</dd>
+				<dd class="d1">
+					<label for="select">얼.죽.아에서 참여하고 싶은 모임은? : </label>
+					<select id="select">
+						<option value="default" selected>--선택해주세요--</option>
+						<option value="sel1">커피</option>
+						<option value="sel2">티</option>
+						<option value="sel3">쉐이크</option>
+					</select>
+				</dd>
+				<dd class="d1">포트폴리오 제출하기</dd>
+				<dd><button type="button">업로드 하기</button></dd>
+				<dd class="d1">마지막으로 하고 싶은 말은?</dd>
+				<dd><textarea rows="8" cols="60"></textarea></dd>
+			</dl>
+			<div id="buttons">
+				<button type="reset" id="res">다시하기</button>
+				<button type="submit" id="apply">제출하기</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

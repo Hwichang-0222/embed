@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex11</title>
+	<style>
+		table, th, td {
+			border:1px solid #cdcdcd;
+			border-collapse: collapse;
+		}
+		th, td {
+		padding: 1px 10px;
+		width: 110px;
+		height: 40px
+		}
+	</style>
+</head>
+<body>
+	<h2>테이블 셀 병합 실습1</h2>
+	<table>
+		<caption>Time Tabel</caption>
+		<thead>
+			<tr>
+				<td rowspan="2">Days</td>
+				<td colspan="6" style="text-align: center;">Time</td>
+			</tr>
+			<tr style="text-align: right;">
+				<td>8:00</td>
+				<td>9:00</td>
+				<td>10:00</td>
+				<td>11:00</td>
+				<td>11:30</td>
+				<td>12:30</td>
+			</tr>
+		</thead>
+		<tbody style="text-align: left;">
+			<tr>
+				<td>Mon</td>
+				<td>Course 1</td>
+				<td>Course 2</td>
+				<td>Course 3</td>
+				<td rowspan="5" style="text-align: center;" >B<br>R<br>E<br>A<br>K</td>
+				<td>Course 5</td>
+			</tr>
+			<tr>
+				<td>Tue</td>
+				<td colspan="2"></td>
+				<td>Course 2</td>
+				<td>Course 4</td>
+				<td>Course 1</td>
+			</tr>
+			<tr>
+				<td>Wed</td>
+				<td>Course 3</td>
+				<td colspan="2"></td>
+				<td>Course 2</td>
+			</tr>
+			<tr>
+				<td>Thr</td>
+				<td rowspan="2">Course 4</td>
+				<td>Course 2</td>
+				<td>Course 3</td>
+				<td rowspan="2" colspan="2" style="text-align: center;">Thesis</td>
+			</tr>
+			<tr>
+				<td>Fri</td>
+				<td></td>
+				<td>Course 1</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

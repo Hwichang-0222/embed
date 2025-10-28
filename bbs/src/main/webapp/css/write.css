@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* 기본 설정 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "맑은 고딕", Arial, sans-serif;
+    background: #f7f8fa;
+    color: #333;
+    margin: 0;
+    padding: 24px;
+}
+
+#container {
+    max-width: 720px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* 제목 */
+h1 {
+    margin-bottom: 22px;
+    font-size: 24px;
+    color: #2b2b2b;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 작성 폼 */
+.write-form {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px 16px;
+    align-items: center;
+}
+
+.write-form label {
+    font-weight: 600;
+    color: #444;
+}
+
+.write-form input[type="text"],
+.write-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d6d9de;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.write-form input[type="text"]:focus,
+.write-form textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+.write-form textarea {
+    min-height: 160px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* 저장 버튼 */
+.write-form input[type="submit"] {
+    grid-column: 1 / -1;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.04s ease;
+    margin-top: 6px;
+}
+
+.write-form input[type="submit"]:hover {
+    filter: brightness(0.97);
+}
+
+.write-form input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* 목록 버튼 */
+.button-wrap {
+    margin-top: 14px;
+    text-align: right;
+}
+
+.button-wrap button {
+    padding: 10px 14px;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.04s ease, filter 0.2s ease;
+}
+
+.button-wrap button:hover {
+    filter: brightness(0.96);
+}
+
+.button-wrap button:active {
+    transform: translateY(1px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 640px) {
+    body {
+        padding: 16px;
+    }
+    
+    #container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .write-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .write-form label {
+        margin-top: 6px;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 416 Example</title>
+	<style>
+		.container{
+			width: 900px;
+			margin: 0 auto; 
+		}
+		
+		.navi{
+			width: 900px;
+			height: 60px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #cdcdcd;
+		}
+		
+		.navi ul{
+			list-style: none;
+			padding-top: 10px;
+			padding-bottom: 5px;
+		}
+	
+		.navi ul li {
+			float: left;
+			width: 150px;
+			padding: 10px;
+		}
+		
+		.navi a:link, .navi a:visited{
+			display: block;
+			font-size:  14px;
+			color: #000000;
+			padding: 10px;
+			text-decoration: none;
+			text-align: center;
+		}
+		
+		.navi a:hover, .navi a:focus{
+			background-color: #222222;
+			color: #ffffff;
+		}
+		
+		.navi a:active {
+			background-color: #ff0000;
+		}
+		
+		#check_in {
+			background-color: #ffffff;
+			border: 1px solid #222222;
+			border-radius: 5px;
+			padding: 20px;
+			width: 400px;
+			margin: 30px auto;
+		}
+		
+		#check_in fieldset {
+			border:1px solid #cdcdcd;
+			margin-bottom: 30px;
+		}
+		
+		#check_in legend {
+			font-size: 16px;
+			font-weight: bold;
+			padding-left: 5px;
+			padding-bottom: 10px;
+		}
+		
+		#check_in ul li {
+			list-style: none;
+			line-height: 30px;
+			padding: 5px 10px;
+			margin-bottom: 2px;
+		}
+		
+		#check_in input:checked + label {
+			color: #ff0000;
+			font-weight: bold;
+		}
+		
+		#check_in fieldset:nth-of-type(1) label {
+			float: left;
+			width: 60px;
+			font-size: 13px;
+		}
+		
+		#check_in input[type=text], input[type=tel] {
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			padding: 5px;
+			width: 200px;
+		}
+		
+		#check_in button {
+			border: 1px solid #222222;
+			border-radius: 20px;
+			font-size: 16px;
+			padding: 7px 25px;
+			margin: auto;
+			letter-spacing: 2px;
+			display: block;
+		}
+		
+		#check_in button:hover {
+			background-color: #000000;
+			color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="navi">
+			<ul>
+				<li><a href="#">이용 안내</a></li>
+				<li><a href="#">객실 소개</a></li>
+				<li><a href="#">예약 방법</a></li>
+				<li><a href="#">예약 하기</a></li>
+			</ul>
+		</nav>
+		<form id="check_in" action="#">
+			<fieldset>
+				<legend>개인정보</legend>
+				<ul>
+					<li>
+						<label for="name">이름</label>
+						<input type="text" name="name" id="name" required autofocus>
+					</li>
+					<li>
+						<label for="tel">연락처</label>
+						<input type="tel" name="tel" id="tel">
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>객실 형태</legend>
+				<ul>
+					<li>
+						<input type="radio" name="room_type" id="room_type_basic">
+						<label for="room_type_basic">기본형(최대 2인)</label>
+					</li>
+					<li>
+						<input type="radio" name="room_type" id="room_type_family">
+						<label for="room_type_family">가족형(최대 8인)</label>
+					</li>
+				</ul>
+			</fieldset>
+			<button type="submit">제출</button>
+		</form>
+	</div>
+</body>
+</html>

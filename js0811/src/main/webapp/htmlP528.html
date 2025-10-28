@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page 528 Example</title>
+</head>
+<body>
+	<h1>3의 배수 확인하기</h1>
+	<div>입력 받은 값 : <input type="text" id="inputNum"></div>
+	<div>실행 결과 : <span id="result"></span></div>
+	<script>
+	document.getElementById("inputNum").addEventListener("input", function () {
+		let inputnum = this.value;
+
+		if (!isNaN(inputnum)) {
+			if(inputnum % 3 == 0) {
+				result = "3의 배수입니다.";
+			} else {
+				result = "3의 배수가 아닙니다.";
+			}
+			document.getElementById("result").innerHTML = result;
+		} else {
+			document.getElementById("result").innerHTML = "";
+		}
+	});
+	</script>
+</body>
+</html>
